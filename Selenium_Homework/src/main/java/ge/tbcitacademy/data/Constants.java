@@ -22,7 +22,26 @@ public class Constants {
             TRUE_LMNT = "true",
             ELEMENTAL_SELENIUM_LMNT = "Elemental Selenium",
             HREF_LMNT = "href",
-            ELEMENTAL_SELENIUM_URL = "http://elementalselenium.com/";
+            ELEMENTAL_SELENIUM_URL = "http://elementalselenium.com/",
+            JQUERYUI_URL = "https://jqueryui.com/slider/",
+            ASIDE_H3_XPATH = "//aside[h3[@class='widget-title' or text()='Effects']]",
+            UL_LI_XPATH = "//ul/Li",
+            HEROKU_A_R_URL = "http://the-internet.herokuapp.com/add_remove_elements/",
+            ADD_BTN = "//button[text()='Add Element']",
+            LAST_DLT_BTN_CSS = "button.added-manually",
+            HREF = "href",
+            HREF_SOUT_TXT = "href link : ",
+            HREF_ASSERT = "animate",
+            LDB_ATTRIBUTE = "class",
+            ASSERT_CONTAINS_A_M = "added-manually",
+            DELETE_BTN_CSS = "button[onclick^='deleteElement']",
+            ONCLICK_ATT = "onclick",
+            DEL_LMNT = "deleteElement()",
+            HEROKU_CHALLENGING_DOM = "http://the-internet.herokuapp.com/challenging_dom",
+            APERIAN_XPATH = "//td[text()='Apeirian9']/preceding-sibling::td";
+
+
+
 
 
 }

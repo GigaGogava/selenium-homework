@@ -10,17 +10,17 @@ import org.testng.annotations.Test;
 
 
 public class CommandsTest extends Constants {
-    private static WebDriver driver;
+    private WebDriver driver;
 
 
     @BeforeClass
-    public static void setup() {
+    public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(HEROKUAPP_URL);
     }
     @AfterClass
-    public static void tearDown() {
+    public void tearDown() {
             driver.quit();
     }
 
