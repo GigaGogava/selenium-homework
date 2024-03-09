@@ -34,7 +34,6 @@ private WebDriver driver;
         filterElements.parallelStream().forEach(lmnt ->{
             WebElement forEa = lmnt.findElement(By.tagName("a"));
             String href = forEa.getAttribute(HREF);
-            System.out.println(HREF_SOUT_TXT + href);
             if (!href.contains(HREF_ASSERT)) {
                 System.out.println(HREF_SOUT_TXT + href);//??
             }

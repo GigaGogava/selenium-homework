@@ -38,7 +38,8 @@ public class Constants {
             ONCLICK_ATT = "onclick",
             DEL_LMNT = "deleteElement()",
             HEROKU_CHALLENGING_DOM = "http://the-internet.herokuapp.com/challenging_dom",
-            APERIAN_XPATH = "//td[text()='Apeirian9']/preceding-sibling::td";
+            APERIAN_XPATH = "//td[text()='Apeirian9']/preceding-sibling::td",
+            HREF_SOUT_TXT1 = "??";
 
 
 
