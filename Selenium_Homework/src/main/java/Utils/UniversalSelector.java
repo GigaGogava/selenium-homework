@@ -8,8 +8,7 @@ import java.util.List;
 
 public class UniversalSelector {
     public static void universalSelector(Object element, String visibleText) {
-        if (element instanceof Select) {
-            Select select = (Select) element;
+        if (element instanceof Select select) {
             select.selectByVisibleText(visibleText);
         } else if (element instanceof WebElement) {
             WebElement webElement = (WebElement) element;
@@ -23,6 +22,6 @@ public class UniversalSelector {
         } else {
             throw new IllegalArgumentException("Invalid element type");
         }
-        System.out.println("I AM A FIX2");
+        System.out.println("I AM A FIXx");
     }
 }
