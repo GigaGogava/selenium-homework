@@ -102,5 +102,6 @@ public class JSexecutor extends Constants {
         String entriesText = (String) js.executeScript("return arguments[0].textContent;", entriesBox);
         Assert.assertTrue(entriesText.contains("Entries"));
     }
-
+    @Test
+    public void emptyTest(){}
 }
