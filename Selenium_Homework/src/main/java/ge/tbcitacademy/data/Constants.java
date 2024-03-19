@@ -77,7 +77,15 @@ public class Constants {
             DEMOQA_PROG_BAR_URL = "https://demoqa.com/progress-bar",
             START_STOP_BTN = "startStopButton",
             SCROLL_DOWN = "window.scrollBy(0, 500)",
-            PROGRESS_BAR_ID = "progressBar";
+            PROGRESS_BAR_ID = "progressBar",
+            WEBDRIVER_UNI_URL = "http://webdriveruniversity.com/To-Do-List/index.html",
+            ENTRIES_XPATH ="//*[@id=\"zone2-entries\"]",
+            POP_TUT_CSS = ".post-title a",
+            TUT_LINKS_TXT = "\nTutorial links:",
+            CODE_EX_TXT = "Code examples:",
+            TECHLISTIC_URL = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
+
+
 
 
 
