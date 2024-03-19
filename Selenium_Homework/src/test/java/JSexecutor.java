@@ -5,11 +5,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,14 +18,29 @@ import java.util.Map;
 public class JSexecutor extends Constants {
     private WebDriver driver;
 
-    @BeforeClass
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+    @BeforeTest
+    @Parameters("browser")
+    public void setUp(String browser) {
+        System.out.println(browser);
+        if (browser.equalsIgnoreCase("chrome")){
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+        }
+        if (browser.equalsIgnoreCase("edge")) {
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+            driver.manage().window().maximize();
+
+        } else if (browser.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+            driver.manage().window().maximize();
+        }
+
     }
 
-    @AfterClass
+    @AfterTest
     public void tearDown() {
         driver.quit();
     }
@@ -33,7 +48,7 @@ public class JSexecutor extends Constants {
 
     @Test
     public void deleteTest() {
-        driver.get(TECHLISTIC_URL);
+        driver.get(WEBDRIVER_UNI_URL);
         WebElement item = driver.findElement(By.xpath("//*[@id=\"container\"]/ul/li[1]"));
         Actions actions = new Actions(driver);
         actions.moveToElement(item).perform();
@@ -80,10 +95,9 @@ public class JSexecutor extends Constants {
     }
     @Test
     public void anotherScrollTest() {
-
+        driver.get(WEBDRIVER_SCROLL_URL);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        driver.get(WEBDRIVER_UNI_URL);
-        WebElement entriesBox = driver.findElement(By.xpath("//*[@id=\"zone2-entries\"]"));
+        WebElement entriesBox = driver.findElement(By.xpath("//*[@id='zone2-entries']"));
         js.executeScript("arguments[0].scrollIntoView();", entriesBox);
         String entriesText = (String) js.executeScript("return arguments[0].textContent;", entriesBox);
         Assert.assertTrue(entriesText.contains("Entries"));

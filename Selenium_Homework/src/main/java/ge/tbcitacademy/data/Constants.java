@@ -83,7 +83,16 @@ public class Constants {
             POP_TUT_CSS = ".post-title a",
             TUT_LINKS_TXT = "\nTutorial links:",
             CODE_EX_TXT = "Code examples:",
-            TECHLISTIC_URL = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html";
+            TECHLISTIC_URL = "https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html",
+            WEBDRIVER_SCROLL_URL = "http://webdriveruniversity.com/Scrolling/index.html",
+            TEMPLATE_COOKIE = "active_template",
+            PUB_SITE = "pub_site",
+            TEMPLATE_FOUND_TXT = "Cookie with 'active_template' and 'pub_site' found",
+            COOKIE_NOT_FOUND_TXT = "Cookie not found or value doesn't contain 'pub.site'",
+            DEMO_AUTOTEST_URL = "https://demo.automationtesting.in/AutoComplete.html",
+            DEMO_SEARCHBOX_INPUT_XPATH = "//*[@id=\"searchbox\"]",
+            DEMO_SUGGESTIONS_CLASSNAME = "ui-menu-item",
+            DEMO_SUG_CSS = ".ui-autocomplete li";
 
 
 
