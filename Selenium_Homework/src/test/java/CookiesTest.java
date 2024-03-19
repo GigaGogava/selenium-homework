@@ -101,8 +101,6 @@ public class CookiesTest extends Constants {
         suggestions.get(0).click();
     }
     @Test
-    public void NotEmptyTest(){
-        Cookie cookie = new Cookie("name","value");
-    }
+    public void NotEmptyTest(){}
 }
 
