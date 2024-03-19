@@ -100,9 +100,6 @@ public class CookiesTest extends Constants {
         List<WebElement> suggestions = driver.findElements(By.cssSelector(DEMO_SUG_CSS));
         suggestions.get(0).click();
     }
-    @Test
-    public void NotEmptyTest(){
-        Cookie cookie = new Cookie("name","value");
-    }
+
 }
 
