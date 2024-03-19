@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite">
+    <test name="ChromeTest">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="JSexecutor"/>
+        </classes>
+    </test>
+    <test name="EdgeTest">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="JSexecutor"/>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="JSexecutor"/>
+        </classes>
+    </test>
+
+    <test name="ChromeTestCookies">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="CookiesTest"/>
+        </classes>
+    </test>
+    <test name="EdgeTestCookies">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="CookiesTest"/>
+        </classes>
+    </test>
+    <test name="FirefoxTestCookies">
+        <parameter name="browser" value="Firefox"/>
+        <classes>
+            <class name="CookiesTest"/>
+        </classes>
+    </test>
+</suite>
